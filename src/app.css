@@ -1,0 +1,26 @@
+@import '~antd/dist/antd.css';
+
+.principal-layout {
+  min-height: 100vh;
+  background-image: url("./images/background-space.jpg");
+  background-position: "center";
+  background-repeat: "no-repeat";
+  background-size: "cover";
+}
+
+.content-background {
+  background-color: rgba(255, 100, 255, 0.15);
+}
+
+.ant-divider-horizontal.ant-divider-with-text-center::before,
+.ant-divider-horizontal.ant-divider-with-text-left::before,
+.ant-divider-horizontal.ant-divider-with-text-right::before,
+.ant-divider-horizontal.ant-divider-with-text-center::after,
+.ant-divider-horizontal.ant-divider-with-text-left::after,
+.ant-divider-horizontal.ant-divider-with-text-right::after {
+  border-top: 1px solid #000;
+}
+
+.anticon-copy {
+  color: rgb(58, 36, 94)
+}
