@@ -1,5 +1,7 @@
 {
+  "homepage": "https://miguelo12.github.io/portfolio/",
   "name": "react-static-example-typescript",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "react-static start",
@@ -7,7 +9,8 @@
     "build": "react-static build",
     "bundle": "react-static bundle",
     "export": "react-static export",
-    "serve": "serve dist -p 3000 -s"
+    "serve": "serve dist -p 3000 -s",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@ant-design/colors": "^3.2.2",
@@ -31,6 +34,7 @@
     "@types/webpack-env": "^1.14.0",
     "eslint-config-react-tools": "1.1.7",
     "file-loader": "^4.2.0",
+    "gh-pages": "^2.1.1",
     "react-hot-loader": "^4.12.11",
     "serve": "^11.1.0",
     "typescript": "^3.5.3",

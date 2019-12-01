@@ -14,19 +14,19 @@ export default (props: any) => {
   return (
     <Menu style={{ lineHeight: '64px' }} theme="dark" onClick={name => handleClick(name)} selectedKeys={[current]} mode="horizontal">
       <Menu.Item key="home">
-        <Link to="/">
+        <Link to="/portfolio/">
           <Icon type="home" />
           Home
         </Link>
       </Menu.Item>
       <Menu.Item key="about">
-        <Link to="/about">
+        <Link to="/portfolio/about">
           <Icon type="user" />
           Me
         </Link>
       </Menu.Item>
       <Menu.Item key="app">
-        <Link to="/blog">
+        <Link to="/portfolio/blog">
           <Icon type="windows" />
           Pc
         </Link>

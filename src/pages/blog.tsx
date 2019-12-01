@@ -16,8 +16,8 @@ export default () => {
       <Header>
         <Nav current="app" />
       </Header>
-      <div style={{ padding: '25px 50px' }} >
-        <Content style={{ background: 'rgba(220, 220, 220, 0.85)', padding: 24, minHeight: 50 }}>
+      <div style={{ padding: '25px 15px' }} >
+        <Content style={{ background: 'rgba(235, 235, 235, 0.88)', padding: 24, minHeight: 50 }}>
           <Breadcrumb>
             <Breadcrumb.Item>
               <Link to="/">
@@ -31,8 +31,8 @@ export default () => {
           </Breadcrumb>
         </Content>
       </div>
-      <div style={{ padding: '0px 50px' }} >
-        <Content style={{ background: 'rgba(220, 220, 220, 0.85)', padding: 24, minHeight: 380 }}>
+      <div style={{ padding: '0 15px 25px' }} >
+        <Content style={{ background: 'rgba(235, 235, 235, 0.88)', padding: 24, minHeight: 380 }}>
           <Title>It's blog time.</Title>
           <br />
           All Posts:

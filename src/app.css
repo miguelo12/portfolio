@@ -24,3 +24,66 @@
 .anticon-copy {
   color: rgb(58, 36, 94)
 }
+
+h1, .active {
+  animation: text-shadow 2s ease-in-out 1s infinite;
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 1;
+}
+
+@keyframes text-shadow {
+  0% {  
+      transform: translateY(0);
+      text-shadow: 
+          0 0 0 #870cfb, 
+          0 0 0 #1f8888, 
+          0 0 0 #fb203b, 
+          0 0 0 #f7f59d;
+  }
+
+  20% {  
+      transform: translateY(-0.4em);
+      text-shadow: 
+          0 0.125em 0 #870cfb, 
+          0 0.25em 0 #1f8888, 
+          0 -0.125em 0 #fb203b, 
+          0 -0.25em 0 #f7f59d;
+  }
+
+  40% {  
+      transform: translateY(0.4em);
+      text-shadow: 
+          0 -0.0625em 0 #870cfb, 
+          0 -0.125em 0 #1f8888, 
+          0 0.0625em 0 #fb203b, 
+          0 0.125em 0 #f7f59d;
+  }
+  
+ 60% {
+      transform: translateY(-0.25em);
+      text-shadow: 
+          0 0.03125em 0 #870cfb, 
+          0 0.0625em 0 #1f8888, 
+          0 -0.03125em 0 #fb203b, 
+          0 -0.0625em 0 #f7f59d;
+  }
+
+  80% {  
+      transform: translateY(0);
+      text-shadow: 
+          0 0 0 #870cfb, 
+          0 0 0 #1f8888, 
+          0 0 0 #fb203b, 
+          0 0 0 #f7f59d;
+  }
+
+  100% {  
+    transform: translateY(0);
+    text-shadow: 
+        0 0 0 #870cfb, 
+        0 0 0 #1f8888, 
+        0 0 0 #fb203b, 
+        0 0 0 #f7f59d;
+  }
+}

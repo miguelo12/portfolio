@@ -30,7 +30,9 @@ function App() {
           </FancyDiv>
         </Content>
         <BackTop />
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center', backgroundColor: '#001529', color: '#fff' }}>
+          Ant Design ©2018 Created by Ant UED
+        </Footer>
       </Layout>
     </Root>
   )

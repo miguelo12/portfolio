@@ -89,8 +89,8 @@ const sections = [
     'name': 'Education',
     'fields': [
       {
-        'field': 'a',
-        'value': 'a'
+        'field': 'b',
+        'value': 'b'
       }
     ]
   },
@@ -110,7 +110,7 @@ export default () => (
     <Header>
       <Nav current="about" />
     </Header>
-    <div style={{ padding: '25px 50px' }} >
+    <div style={{ padding: '25px 15px' }} >
       <Content style={{ background: 'rgba(235, 235, 235, 0.88)', padding: 24, minHeight: 50 }}>
         <Breadcrumb>
           <Breadcrumb.Item>
@@ -125,7 +125,7 @@ export default () => (
         </Breadcrumb>
       </Content>
     </div>
-    <div style={{ padding: '0px 50px' }} >
+    <div style={{ padding: '0px 15px' }} >
       <Content style={{ background: 'rgba(235, 235, 235, 0.88)', padding: 24, minHeight: 380 }}>
         <Title>About Me</Title>
         <Row gutter={[16, 16]}>
@@ -134,7 +134,7 @@ export default () => (
               return(
                 <Col key={data.field} xs={24} sm={24} md={12} lg={8} xl={6}>
                   <Paragraph copyable={{ text: data.href }}>
-                    <b>{data.field}:</b> {data.value} <a href={data.href}>
+                    <b>{data.field}:</b> {data.value} <a target="_blank" href={data.href}>
                         <Icon type="global" style={{ color: "rgba(58, 36, 94)" }} />
                       </a>
                   </Paragraph>
@@ -154,7 +154,7 @@ export default () => (
                 <Divider orientation="left">{ data.name }</Divider>
                 {data.fields.map((data) => {
                   return(
-                    <p><b>{data.field}:</b> <span className="ant-form-text">{data.value}</span></p>
+                    <p key={data.field} ><b>{data.field}:</b> <span className="ant-form-text">{data.value}</span></p>
                   )
                 })}
               </div>
@@ -163,14 +163,16 @@ export default () => (
         </Row>
       </Content>
     </div>
-    <div style={{ padding: '25px 50px' }} >
+    <div style={{ padding: '25px 15px' }} >
       <Content style={{ background: 'rgba(235, 235, 235, 0.88)', padding: 24, minHeight: 380 }}>
         <Title>My Skills</Title>
         <Row gutter={[16, 16]}>
           {programming_language.map((data) => {
             return(
               <Col key={data.title} xs={24} sm={24} md={12} lg={8} xl={6}>
-                <Card title={<div><Icon type="code" style={{ color: data.icon_color }}/> {data.title} </div>} extra={<Modal title={data.title} icon_color={data.icon_color} content="weeee" />} style={{ width: '100%'}}>
+                <Card title={<div><Icon type="code" style={{ color: data.icon_color }}/> {data.title} </div>}
+                      extra={<Modal title={data.title} icon_color={data.icon_color} content="weeee" />}
+                      style={{ width: '100%' }}>
                   <Title level={4}>Progress</Title>
                   <Progress percent={data.progress} strokeColor={data.progress_color} status="active"/>
                 </Card>
