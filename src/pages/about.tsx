@@ -114,7 +114,7 @@ export default () => (
       <Content style={{ background: 'rgba(235, 235, 235, 0.88)', padding: 24, minHeight: 50 }}>
         <Breadcrumb>
           <Breadcrumb.Item>
-            <Link to="/">
+            <Link to="/portfolio/">
               <Icon type="home" />
             </Link>
           </Breadcrumb.Item>

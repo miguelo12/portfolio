@@ -10,7 +10,8 @@
     "bundle": "react-static bundle",
     "export": "react-static export",
     "serve": "serve dist -p 3000 -s",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "prod": "yarn build && yarn deploy"
   },
   "dependencies": {
     "@ant-design/colors": "^3.2.2",
