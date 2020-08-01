@@ -8,7 +8,7 @@ export default {
   devBasePath: 'portfolio',
   devServer: {
     port: 3000,
-    host: '127.0.0.1/portfolio/',
+    host: 'localhost',
   },
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteProps: () => ({

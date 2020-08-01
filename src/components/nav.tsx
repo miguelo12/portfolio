@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from '@reach/router'
-import { Menu, Icon } from 'antd';
+import { Menu } from 'antd'
+import { HomeFilled, UserAddOutlined, WindowsFilled } from '@ant-design/icons'
 
 export default (props: any) => {
   const [current, setCurrent] = useState('')
@@ -15,19 +16,19 @@ export default (props: any) => {
     <Menu style={{ lineHeight: '64px' }} theme="dark" onClick={name => handleClick(name)} selectedKeys={[current]} mode="horizontal">
       <Menu.Item key="home">
         <Link to="/portfolio/">
-          <Icon type="home" />
+          <HomeFilled />
           Home
         </Link>
       </Menu.Item>
       <Menu.Item key="about">
         <Link to="/portfolio/about">
-          <Icon type="user" />
+          <UserAddOutlined />
           Me
         </Link>
       </Menu.Item>
       <Menu.Item key="app">
         <Link to="/portfolio/blog">
-          <Icon type="windows" />
+          <WindowsFilled />
           Pc
         </Link>
       </Menu.Item>

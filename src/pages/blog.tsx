@@ -2,7 +2,8 @@ import React from 'react'
 import { useRouteData } from 'react-static'
 import { Link } from '@reach/router'
 import { Post } from 'types'
-import { Breadcrumb, Icon, Layout, Typography } from 'antd'
+import { Breadcrumb, Layout, Typography } from 'antd'
+import { HomeFilled, WindowsFilled } from '@ant-design/icons'
 import Nav from 'components/nav'
 
 const { Header, Content } = Layout
@@ -21,11 +22,11 @@ export default () => {
           <Breadcrumb>
             <Breadcrumb.Item>
               <Link to="/portfolio/">
-                <Icon type="home" />
+                <HomeFilled />
               </Link>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
-              <Icon type="windows" />
+              <WindowsFilled />
               <span>App</span>
             </Breadcrumb.Item>
           </Breadcrumb>

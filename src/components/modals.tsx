@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Modal, Button, Icon } from 'antd';
+import { Modal, Button } from 'antd';
+import { SwitcherFilled } from '@ant-design/icons'
 
 export default (props: any) => {
     const [show, setShow] = useState(false)
@@ -21,7 +22,7 @@ export default (props: any) => {
     return (
         <div>
             <Button type="link" onClick={handleShow}>
-                <Icon type="switcher" style={{ color: icon_color, fontSize: '21px' }} />
+                <SwitcherFilled style={{ color: icon_color, fontSize: '21px' }} />
             </Button>
             <Modal
             title={title}

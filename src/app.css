@@ -33,57 +33,57 @@ h1, .active {
 }
 
 @keyframes text-shadow {
-  0% {  
+  0% {
       transform: translateY(0);
-      text-shadow: 
-          0 0 0 #870cfb, 
-          0 0 0 #1f8888, 
-          0 0 0 #fb203b, 
+      text-shadow:
+          0 0 0 #870cfb,
+          0 0 0 #1f8888,
+          0 0 0 #fb203b,
           0 0 0 #f7f59d;
   }
 
-  20% {  
+  20% {
       transform: translateY(-0.4em);
-      text-shadow: 
-          0 0.125em 0 #870cfb, 
-          0 0.25em 0 #1f8888, 
-          0 -0.125em 0 #fb203b, 
+      text-shadow:
+          0 0.125em 0 #870cfb,
+          0 0.25em 0 #1f8888,
+          0 -0.125em 0 #fb203b,
           0 -0.25em 0 #f7f59d;
   }
 
-  40% {  
+  40% {
       transform: translateY(0.4em);
-      text-shadow: 
-          0 -0.0625em 0 #870cfb, 
-          0 -0.125em 0 #1f8888, 
-          0 0.0625em 0 #fb203b, 
+      text-shadow:
+          0 -0.0625em 0 #870cfb,
+          0 -0.125em 0 #1f8888,
+          0 0.0625em 0 #fb203b,
           0 0.125em 0 #f7f59d;
   }
-  
+
  60% {
       transform: translateY(-0.25em);
-      text-shadow: 
-          0 0.03125em 0 #870cfb, 
-          0 0.0625em 0 #1f8888, 
-          0 -0.03125em 0 #fb203b, 
+      text-shadow:
+          0 0.03125em 0 #870cfb,
+          0 0.0625em 0 #1f8888,
+          0 -0.03125em 0 #fb203b,
           0 -0.0625em 0 #f7f59d;
   }
 
-  80% {  
+  80% {
       transform: translateY(0);
-      text-shadow: 
-          0 0 0 #870cfb, 
-          0 0 0 #1f8888, 
-          0 0 0 #fb203b, 
+      text-shadow:
+          0 0 0 #870cfb,
+          0 0 0 #1f8888,
+          0 0 0 #fb203b,
           0 0 0 #f7f59d;
   }
 
-  100% {  
+  100% {
     transform: translateY(0);
-    text-shadow: 
-        0 0 0 #870cfb, 
-        0 0 0 #1f8888, 
-        0 0 0 #fb203b, 
+    text-shadow:
+        0 0 0 #870cfb,
+        0 0 0 #1f8888,
+        0 0 0 #fb203b,
         0 0 0 #f7f59d;
   }
 }

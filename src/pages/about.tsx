@@ -1,6 +1,7 @@
 import React from 'react'
-import { Layout, Breadcrumb, Icon, Progress, Typography, Card, Row, Col, Divider } from 'antd'
+import { Layout, Breadcrumb, Progress, Typography, Card, Row, Col, Divider } from 'antd'
 import { green, blue, geekblue, yellow, red, purple, gold } from '@ant-design/colors'
+import { HomeFilled, CodeFilled, UserAddOutlined, GlobalOutlined } from '@ant-design/icons'
 import { Link } from '@reach/router'
 import Nav from 'components/nav'
 import Modal from 'components/modals'
@@ -37,7 +38,7 @@ const programming_language = [
    'progress': 50,
    'progress_color': geekblue.primary },
   {'title': 'Oracle 12c',
-   'icon_color': red[7], 
+   'icon_color': red[7],
    'progress': 50,
    'progress_color': red[7] },
   {'title': 'AWS',
@@ -115,11 +116,11 @@ export default () => (
         <Breadcrumb>
           <Breadcrumb.Item>
             <Link to="/portfolio/">
-              <Icon type="home" />
+              <HomeFilled />
             </Link>
           </Breadcrumb.Item>
           <Breadcrumb.Item>
-            <Icon type="user" />
+            <UserAddOutlined />
             <span>Me</span>
           </Breadcrumb.Item>
         </Breadcrumb>
@@ -135,7 +136,7 @@ export default () => (
                 <Col key={data.field} xs={24} sm={24} md={12} lg={8} xl={6}>
                   <Paragraph copyable={{ text: data.href }}>
                     <b>{data.field}:</b> {data.value} <a target="_blank" href={data.href}>
-                        <Icon type="global" style={{ color: "rgba(58, 36, 94)" }} />
+                        <GlobalOutlined style={{ color: "rgba(58, 36, 94)" }} />
                       </a>
                   </Paragraph>
                 </Col>
@@ -170,7 +171,7 @@ export default () => (
           {programming_language.map((data) => {
             return(
               <Col key={data.title} xs={24} sm={24} md={12} lg={8} xl={6}>
-                <Card title={<div><Icon type="code" style={{ color: data.icon_color }}/> {data.title} </div>}
+                <Card title={<div><CodeFilled style={{ color: data.icon_color }}/> {data.title} </div>}
                       extra={<Modal title={data.title} icon_color={data.icon_color} content="weeee" />}
                       style={{ width: '100%' }}>
                   <Title level={4}>Progress</Title>

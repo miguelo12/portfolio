@@ -2,12 +2,13 @@ import React from 'react'
 import { Root, Routes } from 'react-static'
 import { Router } from '@reach/router'
 import FancyDiv from 'components/FancyDiv'
-import { Layout, Spin, Result, Typography, Icon, BackTop } from 'antd';
+import { Layout, Spin, Result, Typography, BackTop } from 'antd';
+import { Loading3QuartersOutlined } from '@ant-design/icons'
 import './app.css'
 
 const { Title } = Typography;
 const { Content, Footer } = Layout;
-const antIcon = <Icon type="loading" style={{ fontSize: 60, color: "#fff" }} spin />;
+const antIcon = <Loading3QuartersOutlined style={{ fontSize: 60, color: "#fff" }} spin />;
 
 
 function App() {
