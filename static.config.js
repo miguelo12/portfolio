@@ -6,11 +6,12 @@ export default {
   siteRoot: 'https://miguelo12.github.io',
   basePath: 'portfolio',
   devBasePath: 'portfolio',
+  maxThreads: 2,
   devServer: {
     port: 3000,
     host: 'localhost',
   },
-  entry: path.join(__dirname, 'src', 'index.tsx'),
+  entry: path.join(__dirname, 'src', 'main.tsx'),
   getSiteProps: () => ({
     title: 'My portfolio'
   }),
@@ -18,20 +19,35 @@ export default {
     const { data: posts } = await axios.get(
       'https://jsonplaceholder.typicode.com/posts'
     )
+    const linktecnology = [
+      {"name": "React-Static", "url": "https://github.com/react-static/react-static"},
+      {"name": "Ant-Design", "url": "https://github.com/ant-design/ant-design"},
+      {"name": "Typescript", "url": "https://github.com/microsoft/TypeScript"},
+      {"name": "Reach Router", "url": "https://github.com/reach/router"},
+      {"name": "React Hot Loader", "url": "https://github.com/gaearon/react-hot-loader"},
+      {"name": "gh-pages", "url": "https://github.com/tschaub/gh-pages"},
+      {"name": "Axios", "url": "https://github.com/axios/axios"},
+    ]
     return [
       {
         path: '/blog',
         getData: () => ({
           posts,
         }),
-        children: posts.map((post /* : Post */) => ({
-          path: `/portfolio/post/${post.id}`,
-          template: 'src/containers/Post',
+        children: posts.map((post) => ({
+          path: `/post/${post.id}/`,
+          template: 'src/pages/post',
           getData: () => ({
             post,
           }),
         })),
       },
+      {
+        path: '/',
+        getData: () => ({
+          linktecnology,
+        })
+      }
     ]
   },
   plugins: [

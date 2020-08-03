@@ -90,8 +90,8 @@ const sections = [
     'name': 'Education',
     'fields': [
       {
-        'field': 'b',
-        'value': 'b'
+        'field': 'Duoc UC',
+        'value': 'Ingeniero en Informatica'
       }
     ]
   },

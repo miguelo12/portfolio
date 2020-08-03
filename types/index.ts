@@ -3,3 +3,8 @@ export interface Post {
   id: number
   title: string
 }
+
+export interface LinkTecnology {
+  name: string,
+  url: string
+}

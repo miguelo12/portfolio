@@ -1,34 +1,40 @@
 import React from 'react'
+import { useRouteData, addPrefetchExcludes } from 'react-static'
 import { Typography, Layout } from 'antd'
+import { LinkTecnology } from 'types'
 import Nav from 'components/nav'
 
-const { Title } = Typography
+const { Title, Link } = Typography
 const { Header, Content } = Layout;
 
-export default () => (
+addPrefetchExcludes([/c/])
+
+export default () => {
+  const { linktecnology }: { linktecnology: LinkTecnology[] } = useRouteData()
+
+  return (
   <div>
     <Header>
       <Nav current="home" />
     </Header>
-    <div style={{ padding: '25px 50px' }} >
-      <Content style={{ 
+    <div style={{ padding: '25px 15px' }} >
+      <Content style={{
         background: 'rgba(235, 235, 235, 0.88)',
         padding: 24,
         minHeight: 380
       }}>
-        <Title>Welcome to my portfolio</Title>
-        <p>
-          Learn{' '}
-          <a href="https://github.com/sw-yx/react-typescript-cheatsheet">
-            React + TypeScript
-          </a>
-        </p>
-        <p>
-          <a href="https://twitter.com/swyx">Report issues with this template</a>
-        </p>
+        <Title style={{ textAlign: 'center' }}>Welcome to my portfolio</Title>
+        <Title level={3}>This proyect contains:</Title>
+        <ul>
+          {linktecnology.map(linktecnology => (
+            <li key={linktecnology.name}>
+              <Link href={linktecnology.url}>{linktecnology.name}</Link>
+            </li>
+          ))}
+        </ul>
       </Content>
     </div>
   </div>
-)
+)}
 
 //<img src={require("../images/logo.png")} alt="" />
